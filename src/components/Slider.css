@@ -1,0 +1,45 @@
+/* Container for the animated slider */
+.slick-slider {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Style for each slide */
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Styling the next/prev arrows */
+  .slick-prev,
+  .slick-next {
+    font-size: 24px;
+    color: #007bff;
+    z-index: 10;
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+    color: #0056b3;
+  }
+  
+  /* Custom dots styling */
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #007bff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #ff4500;
+    font-size: 14px;
+  }
+  

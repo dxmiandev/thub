@@ -1,0 +1,23 @@
+/* Global background color */
+body, html, #root, .App {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
+
+/* Ensure all pages have the correct background */
+main, div[class^="page-"], div[class*=" page-"] {
+   background-color: #0f1a2c00 !important;
+}
+
+/* Force all page containers to have the correct background */
+.container, .page-container, section {
+  
+  padding-top: 30px; /* Further increased padding */
+}
+
+/* Global top padding for page content */
+.page-content, .content-area, main > div:first-child {
+  padding-top: 30px !important; /* Further increased padding */
+}

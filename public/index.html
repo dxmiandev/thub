@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#007bff" />
+    <meta
+      name="description"
+      content="Truck and Trailer Hub - Your marketplace for commercial trucks and trailers"
+    />
+    <meta name="keywords" content="trucks, trailers, commercial vehicles, marketplace, fleet management" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preconnect to backend API -->
+    <link rel="preconnect" href="https://backend-sigy.onrender.com" />
+    
+    <!-- Navbar background fix -->
+    <style>
+      :root {
+        --navbar-bg: #0F1A2C;
+        --navbar-bg-scrolled: rgba(15, 26, 44, 0.95);
+        --navbar-height: 60px;
+      }
+      
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+      }
+      
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--navbar-height);
+        background-color: #0F1A2C;
+        z-index: 990;
+        /* Force full viewport width */
+        width: 100vw;
+        margin-left: calc((100% - 100vw) / 2);
+      }
+      
+      body.scrolled::before {
+        background-color: var(--navbar-bg-scrolled);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+      }
+      
+      /* Ensure navbar elements appear above the background */
+      .navbar, .navbar-container, .logo-link, .nav-links, .right-actions {
+        position: relative;
+        z-index: 1001;
+      }
+      
+      /* Fix for very large screens */
+      @media (min-width: 2000px) {
+        body::before {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100vw;
+        }
+      }
+      
+      /* Fix for mobile screens */
+      @media (max-width: 768px) {
+        :root {
+          --navbar-height: 55px;
+        }
+      }
+      
+      /* Fix for very small screens */
+      @media (max-width: 320px) {
+        :root {
+          --navbar-height: 50px;
+        }
+      }
+    </style>
+    
+    <!-- Google Translate Script - loaded asynchronously -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,es,ru',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    </script>
+
+    <!-- Fix for client-side routing on page refresh -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages/Netlify/Render
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    
+    <!-- Navbar scroll state initialization script -->
+    <script type="text/javascript">
+      // Initialize scroll state on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        // Check if page is already scrolled on load
+        if (window.scrollY > 20) {
+          document.body.classList.add('scrolled');
+        } else {
+          document.body.classList.remove('scrolled');
+        }
+        
+        // Force repaint to prevent visual glitches
+        document.body.offsetHeight;
+      });
+    </script>
+
+    <title>Truck and Trailer Hub</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- Container for Google Translate -->
+    <div id="google_translate_element" style="display:none;"></div>
+    
+    <div id="root"></div>
+  </body>
+</html>

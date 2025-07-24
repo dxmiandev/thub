@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7d4557dc.css",
+    "main.js": "/static/js/main.9fc2a918.js",
+    "static/media/volvo.jpg": "/static/media/volvo.1a83ecba6e18cc133e73.jpg",
+    "static/media/logo.png": "/static/media/logo.dcb23640fa0672f1bd51.png",
+    "index.html": "/index.html",
+    "main.7d4557dc.css.map": "/static/css/main.7d4557dc.css.map",
+    "main.9fc2a918.js.map": "/static/js/main.9fc2a918.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d4557dc.css",
+    "static/js/main.9fc2a918.js"
+  ]
+}

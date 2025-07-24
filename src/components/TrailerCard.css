@@ -1,0 +1,350 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-light: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --primary-gradient: linear-gradient(135deg, #2563eb, #1d4ed8);
+  --secondary-color: #06b6d4;
+  --secondary-light: #22d3ee;
+  --secondary-dark: #0891b2;
+  --secondary-gradient: linear-gradient(135deg, #22d3ee, #06b6d4);
+  --accent-color: #38bdf8;
+  --success: #10b981;
+  --success-light: #34d399;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --danger-light: #f87171;
+  --dark: #0f172a;
+  --dark-surface: #1e293b;
+  --dark-card: #334155;
+  --white: #ffffff;
+  --light: #f8fafc;
+  --light-gray: #f1f5f9;
+  --medium-gray: #e2e8f0;
+  --dark-gray: #334155;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.12);
+  --shadow-focus: 0 0 0 3px rgba(37, 99, 235, 0.3);
+  --shadow-glow: 0 0 15px rgba(56, 189, 248, 0.3);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --transition: all 0.3s ease;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --card-border-radius: 12px;
+  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.2);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-bg-hover: rgba(255, 255, 255, 0.95);
+  --card-transition: all 0.3s ease;
+  --success-color: #38b000;
+  --warning-color: #ff9100;
+  --danger-color: #d90429;
+  --text-color: #333;
+  --text-light: #777;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --backdrop-filter: blur(10px);
+}
+
+/* Modern Trailer Card Styling */
+.trailer-card {
+  background-color: rgba(30, 41, 59, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.trailer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.trailer-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background-color: #1e293b;
+}
+
+.trailer-image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.trailer-card:hover .trailer-image-img {
+  transform: scale(1.05);
+}
+
+.status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.status-badge.available {
+  background-color: #10b981;
+}
+
+.status-badge.maintenance,
+.status-badge.used {
+  background-color: #f59e0b;
+}
+
+.status-badge.sold,
+.status-badge.retired {
+  background-color: #ef4444;
+}
+
+.trailer-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: rgba(30, 41, 59, 0.98);
+}
+
+.trailer-header {
+  margin-bottom: 12px;
+}
+
+.trailer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+  line-height: 1.3;
+}
+
+.trailer-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.attribute {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attribute-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.attribute-value {
+  font-size: 0.85rem;
+  color: white;
+  font-weight: 600;
+  text-align: right;
+}
+
+.trailer-price {
+  color: #34d399;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.trailer-description {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.trailer-footer {
+  margin-top: auto;
+  display: none;
+}
+
+.mobile-view-details-btn {
+  display: flex;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 12px;
+  margin-top: auto;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  height: 48px;
+  text-decoration: none;
+}
+
+.mobile-view-details-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.trailer-card:hover .mobile-view-details-btn {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.trailer-card:hover .mobile-view-details-btn svg {
+  transform: translateX(3px);
+}
+
+/* List mode styles */
+.trailer-card.list-mode {
+  flex-direction: row;
+  height: auto;
+}
+
+.trailer-card.list-mode .trailer-image {
+  width: 250px;
+  height: 100%;
+  min-height: 200px;
+  flex-shrink: 0;
+}
+
+.trailer-card.list-mode .trailer-info {
+  flex-grow: 1;
+}
+
+.trailer-card.list-mode .trailer-attributes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Responsive Optimizations */
+@media (max-width: 768px) {
+  .trailer-card.list-mode {
+    flex-direction: column;
+  }
+  
+  .trailer-card.list-mode .trailer-image {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .trailer-attributes {
+    gap: 10px;
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .trailer-image {
+    height: 180px;
+    border-radius: 12px 12px 0 0;
+    background-color: #1e293b;
+  }
+  
+  .trailer-image-img {
+    object-position: center;
+    object-fit: cover;
+  }
+  
+  .trailer-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .trailer-attributes {
+    gap: 10px;
+  }
+  
+  .attribute-label {
+    font-size: 0.85rem;
+  }
+  
+  .attribute-value {
+    font-size: 0.85rem;
+  }
+}
+
+/* Very small screens optimization */
+@media (max-width: 350px) {
+  .trailer-image {
+    height: 140px;
+    background-color: #1e293b;
+  }
+  
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .trailer-info {
+    padding: 12px;
+  }
+  
+  .trailer-title {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .attribute-label {
+    font-size: 0.8rem;
+  }
+  
+  .attribute-value {
+    font-size: 0.8rem;
+  }
+  
+  .trailer-price {
+    font-size: 0.95rem;
+  }
+  
+  .mobile-view-details-btn {
+    padding: 10px;
+    font-size: 0.85rem;
+    height: 42px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .trailer-card {
+    transform: none !important;
+  }
+
+  .trailer-card:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+
+  .mobile-view-details-btn:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  
+  .mobile-view-details-btn {
+    min-height: 44px; /* Ensure good touch target size */
+  }
+}
+
+/* Styling for list mode */
+.trailer-card.list-mode .trailer-image {
+  background-color: #1e293b;
+}

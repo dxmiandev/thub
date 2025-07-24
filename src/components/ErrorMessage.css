@@ -1,0 +1,134 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  background-color: rgba(30, 41, 59, 0.8);
+  border: 1px solid #ff5252;
+  text-align: center;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.error-container.full-page {
+  height: 70vh;
+  margin: 2rem auto;
+  max-width: 800px;
+  width: 90%;
+}
+
+.error-icon {
+  font-size: 2.5rem;
+  color: #ff5252;
+  margin-bottom: 1.5rem;
+}
+
+.error-title {
+  color: #ff7070;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.error-message {
+  color: #e2e8f0;
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.retry-button {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.retry-button:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.retry-icon {
+  font-size: 1rem;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .error-container {
+    padding: 1.75rem;
+  }
+  
+  .error-icon {
+    font-size: 2rem;
+  }
+  
+  .error-title {
+    font-size: 1.25rem;
+  }
+  
+  .error-message {
+    max-width: 100%;
+  }
+  
+  .retry-button {
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-container {
+    padding: 1.25rem;
+    margin: 0.75rem auto;
+    width: 95%;
+  }
+  
+  .error-container.full-page {
+    height: 60vh;
+  }
+  
+  .error-icon {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .error-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .error-message {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .retry-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
